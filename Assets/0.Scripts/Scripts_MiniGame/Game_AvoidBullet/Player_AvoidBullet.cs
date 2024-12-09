@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player_AvoidBullet : MonoBehaviour
 {
-    [SerializeField] private Transform posPivot;        //회전의 기준축이 될 트랜스폼 (여기서는 몬스터를 기점으로 회전하기에 몬스터 트랜스폼이 들어감)
-
     [SerializeField] private float radius;
     [SerializeField] private float speed;
     private float angle;
@@ -14,6 +12,7 @@ public class Player_AvoidBullet : MonoBehaviour
     private void Start()
     {
         dir = 1;
+        angle = 4.7f;
     }
 
     private void Update()
@@ -34,6 +33,7 @@ public class Player_AvoidBullet : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             dir *= -1;
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

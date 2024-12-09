@@ -9,10 +9,6 @@ public enum GameState
     STOP
 }
 
-public class UserData
-{
-
-}
 
 
 public class Gamemanager : Singleton<Gamemanager>
